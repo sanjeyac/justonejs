@@ -1,0 +1,14 @@
+{
+  "name": "JustOneJs",
+  "version": "0.0.1",
+  "description": "Extract JS file from HTML tags and minify them into one js file",
+  "main": "justone.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanjeyac/justonejs.git"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "uglify-js": "^2.4.24"
+  }
+}
