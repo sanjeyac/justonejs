@@ -1,7 +1,7 @@
 var cheerio = require('cheerio'),
     fs = require('fs'),
-    uglifyjs = require('uglifyjs'),
-    _ = require("lodash");
+    uglifyjs = require('uglify-js'),
+    _ = require('lodash');
 
 var JS_FILE_NAME = 'all.libs.js';
 var CSS_FILE_NAME = 'all.libs.css';
