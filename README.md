@@ -2,7 +2,7 @@
 
 JustOneJs is a command line utility based on NodeJs.
 
-It reads the html file passed as argument, it extracts all the scripts linked in the html and then minifies all the files into javascript file, easy to upload and mantain.
+It reads the html file passed as argument, it extracts all the scripts linked in the html and then minifies all the files into ONE javascript file, easy to upload and mantain.
 
 The html parsing is done with Cheerio and the compression is done with  UglifyJS 2
 
