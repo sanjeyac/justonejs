@@ -1,6 +1,7 @@
 var cheerio = require('cheerio'),
     fs = require('fs'),
-    uglifyjs = require("uglifyjs");
+    uglifyjs = require('uglifyjs'),
+    _ = require("lodash");
 
 var JS_FILE_NAME = 'all.libs.js';
 var CSS_FILE_NAME = 'all.libs.css';
@@ -37,24 +38,18 @@ function extract(text) {
     var css = $('link').map(function () {
         return $(this).attr('href');
     }).get();
+
     var js = $('script').map(function () {
         return $(this).attr('src');
     }).get();
 
+    js = _(js).invoke('trim');
+    css = _(css).invoke('trim');
 
     console.log('JS FOUND: ' + js);
     console.log('CSS FOUND: ' + css);
 
-    for (var i = 0; i < js.length; i++) {
-        js[i] = js[i].trim();
-    }
-
-    for (var j = 0; j < css.length; j++) {
-        css[j] = css[j].trim();
-    }
-
     uglify(js, css);
-
 }
 
 //process all libs
